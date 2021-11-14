@@ -24,7 +24,7 @@
             <div class="navbar-nav">
                 <a class="nav-link active" href="<?= BASEURL; ?>/home">Home</a>
                 <a class="nav-link" href="<?= BASEURL; ?>/about">About</a>
-                <a class="nav-link" href="<?= BASEURL; ?>/about/page">Blog</a>
+                <a class="nav-link" href="<?= BASEURL; ?>/mahasiswa">Mahasiswa</a>
             </div>
         </div>
     </nav>

@@ -44,7 +44,7 @@
                                 </table>
                             </div>
 
-                            <a href="#" class="btn btn-primary mt-5">Go somewhere</a>
+                            <a href="<?= BASEURL; ?>/about/page" class="btn btn-primary mt-5">Go somewhere</a>
 
 
                         </div>
