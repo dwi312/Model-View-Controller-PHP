@@ -33,11 +33,11 @@
         <?php foreach ($data['mhs'] as $mhs) : ?>
             <div class="col">
                 <div class="card">
-                    <img src="<?= BASEURL; ?>/img/default.jpg" class="card-img-top img-fluid">
+                    <img src="<?= BASEURL; ?>/img/<?= $mhs['gambar']; ?>" class="card-img-top img-fluid">
                     <div class="card-body">
                         <h5 class="card-title"><?= $mhs['nama']; ?></h5>
                         <p class="card-text">No ID <?= $mhs['nrp']; ?></p>
-                        <a href="#" class="btn btn-primary">Details</a>
+                        <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="btn btn-primary">Details</a>
                     </div>
                 </div>
             </div>
