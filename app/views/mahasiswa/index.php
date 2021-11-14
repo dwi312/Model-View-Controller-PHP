@@ -10,7 +10,9 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class=" btn btn-primary" aria-current="page" href="#">Tambah Anggota</a>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+                                    Tambah Anggota
+                                </button>
                             </li>
 
 
@@ -45,5 +47,63 @@
         <?php endforeach; ?>
 
 
+    </div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="judulModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="judulModal">Tambah Anggota</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="POST">
+
+                    <div class="mb-2">
+                        <label for="nama" class="form-label">Nama</label>
+                        <input type="text" class="form-control" name="nama" id="nama">
+                    </div>
+                    <div class="mb-2">
+                        <label for="nrp" class="form-label">NRP</label>
+                        <input type="number" class="form-control" name="nrp" id="nrp">
+                    </div>
+                    <div class="mb-2">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" id="email">
+                    </div>
+                    <div class="input-group mb-3 mt-2">
+                        <label class="input-group-text" for="jurusan">Jurusan</label>
+                        <select class="form-select" name="jurusan" id="jurusan">
+                            <option selected>Pilih Jurusan</option>
+                            <option value="Teknik Mesin">Teknik Mesin</option>
+                            <option value="Teknik Industri">Teknik Industri</option>
+                            <option value="Teknik Informatika">Teknik Informatika</option>
+                            <option value="Teknik Elektro">Teknik Elektro</option>
+                            <option value="Teknik Lingkungan">Teknik Lingkungan</option>
+                            <option value="Teknik Pangan">Teknik Pangan</option>
+                            <option value="Teknik Planologi">Teknik Planologi</option>
+                            <option value="Bisnis">Bisnis</option>
+
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label for="gambar" class="form-label">gambar</label>
+                        <input type="text" class="form-control" name="gambar" id="gambar">
+                    </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Tambah Data</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>

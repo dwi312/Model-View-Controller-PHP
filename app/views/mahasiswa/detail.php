@@ -10,7 +10,7 @@
                     <h3 class="card-title">Java Developer</h3>
 
 
-                    <div class="col-sm-4 mt-4">
+                    <div class="col-sm-5 mt-4">
                         <table class="table table-dark table-sm">
                             <tbody>
                                 <tr>
