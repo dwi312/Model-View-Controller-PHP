@@ -1,27 +1,34 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-7">
+            <?php Flasher::flash(); ?>
+        </div>
+    </div>
+
+</div>
+
+
 <div class="container mt-2">
     <div class="row">
         <div class="col">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+            <nav class="navbar navbar-expand-lg navbar-dark rounded">
                 <div class="container-fluid">
-                    <a class="navbar-brand me-md-5" href="#">Daftar Mahasiswa</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
-                                    Tambah Anggota
-                                </button>
-                            </li>
+                    <h3 class="navbar-brand me-md-5" href="#">Daftar Mahasiswa</h3>
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#formModal">
+                                Tambah Anggota
+                            </button>
+                        </li>
 
 
-                        </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-primary" type="submit">Search</button>
-                        </form>
-                    </div>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+
                 </div>
             </nav>
 
