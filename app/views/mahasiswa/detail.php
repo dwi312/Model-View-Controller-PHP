@@ -44,7 +44,7 @@
                 <a href="<?= BASEURL; ?>/mahasiswa" class="btn btn-outline-light">Kembali ke Menu</a>
                 <div class="">
                     <a href="#" class="btn btn-primary">Edit</a>
-                    <a href="#" class="btn btn-danger">Hapus</a>
+                    <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $data['mhs']['id']; ?>" class="btn btn-danger ms-3" onclick="return confirm('Hapus <?= $data['mhs']['nama']; ?> ?')">Hapus</a>
                 </div>
 
 
