@@ -17,7 +17,7 @@
 
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#formModal">
+                            <button type="button" class="btn btn-outline-light btnTambah" data-bs-toggle="modal" data-bs-target="#formModal">
                                 Tambah Anggota
                             </button>
                         </li>
@@ -46,7 +46,10 @@
                     <div class="card-body">
                         <h5 class="card-title"><?= $mhs['nama']; ?></h5>
                         <p class="card-text">No ID <?= $mhs['nrp']; ?></p>
-                        <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="btn btn-primary">Details</a>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="modalEdit text-decoration-none badge bg-dark " data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?= $mhs['id']; ?>">Edit</a>
+                        <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="text-decoration-none badge bg-dark">Details</a>
                     </div>
                 </div>
             </div>
@@ -71,6 +74,7 @@
             </div>
             <div class="modal-body">
                 <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="POST">
+                    <input type="hidden" class="form-control" name="id" id="id">
 
                     <div class="mb-2">
                         <label for="nama" class="form-label">Nama</label>
@@ -99,9 +103,11 @@
 
                         </select>
                     </div>
-                    <div class="mb-2">
-                        <label for="gambar" class="form-label">gambar</label>
-                        <input type="text" class="form-control" name="gambar" id="gambar">
+                    <div class="d-flex justify-content-around mb-2 input-group">
+                        <img class="col-sm-4 img-fluid img-preview" id="img" src="<?= BASEURL; ?>/img/default.jpg" alt="">
+
+                        <input type="file" class="form-control gambar" name="gambar" onchange="previewImage()" value="<?= $mhs['gambar']; ?>" id="gambar">
+
                     </div>
 
 
